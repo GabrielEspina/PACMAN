@@ -6,55 +6,29 @@ public class Pacman {
 	
 	
 	public Pacman() {
-		this.indicarFila(2);
-		this.indicarColumna(2);
-		this.indicarDireccion("^");
+		setFila(2);
+		setColumna(2);
+		setDireccion(Direccion.PACMAN_ARRIBA);
 	}
-	//Metodos publicos
-	public int obtenerFila(){
-		return this.getFila();
-	}
-	
-	public int obtenerColumna(){
-		return this.getColumna();
-	}
-	
-	public String obtenerDireccion() {
-		return this.getDireccion();
-	}
-	
-	//--------------------------------
-	public void indicarFila(int fila) {
-		this.setFila(fila);
-	}
-	
-	public void indicarColumna(int columna) {
-		this.setColumna(columna);
-	}
-	
-	public void indicarDireccion(String direccion) {
-		this.setDireccion(direccion);
-	}
-	
-	
+
 	//Metodos privados
-	private int getFila() {
+	public int getFila() {
 		return fila;
 	}
-	private void setFila(int fila) {
+	public void setFila(int fila) {
 		this.fila = fila;
 	}
-	private int getColumna() {
+	public  int getColumna() {
 		return columna;
 	}
-	private void setColumna(int columna) {
+	public void setColumna(int columna) {
 		this.columna = columna;
 	}
-	private String getDireccion() {
+	public  String getDireccion() {
 		return direccion;
 	}
-	private void setDireccion(String direccion) {
-		this.direccion = direccion;
+	public void setDireccion(Direccion direccion) {
+		this.direccion = direccion.toString();
 	}
 
 }

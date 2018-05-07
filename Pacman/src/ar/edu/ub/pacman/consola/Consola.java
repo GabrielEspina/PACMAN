@@ -3,46 +3,47 @@ package ar.edu.ub.pacman.consola;
 import java.util.Scanner;
 
 import ar.edu.ub.pacman.data.Laberinto;
+import ar.edu.ub.pacman.data.Direccion;
 
 public class Consola {
 	//METODOS PARA INTERACTUAR CON EL USUARIO
 	Scanner read = new Scanner(System.in);
 	
 	public void mostrarDirecciones() {
-		this.explicarReglas();
-		this.separador();
-		System.out.println("\tW\n"
-							+"\tv\n"
+		explicarReglas();
+		separador();
+		System.out.println("\t"+Direccion.TECLADO_ARRIBA+"\n"
+							+"\t"+Direccion.PACMAN_ARRIBA+"\n"
 							+"A>\t\t<D\n"
 							+"\t^\n"
 							+"\tS");
 		
-		this.separador();
+		separador();
 		
 	}
 	
-	public void mostrarTablero(Laberinto [][] tablero) {
+	public void mostrarTablero(Laberinto tablero) {
 		
 		System.out.println("Para salir presione Q");
-		for(int i = 0;i<11;i++) {
+		for(int i = 0;i<2*(tablero.getCelda()[0].length);i++) {
 			System.out.print("--");
 		}
 		System.out.print("\n|  ");
-		for(int fila =0;fila<5;fila++) {
+		for(int fila =0;fila<tablero.getCelda().length;fila++) {
 			
-			for(int columna =0;columna<5;columna++) {
-				System.out.print(tablero[fila][columna].obtenerCelda());
-				if (columna != 4) {
+			for(int columna =0;columna<tablero.getCelda()[0].length;columna++) {
+				System.out.print(tablero.getCelda()[fila][columna].obtenerCelda());
+				if (columna != tablero.getCelda()[0].length-1) {
 					System.out.print("   ");
 				}
 			}
 			
 			System.out.println("|  ");
-			if(fila != 4)
+			if(fila != tablero.getCelda().length-1)
 				System.out.print("|  ");
 		}
 		
-		for(int i = 0;i<11;i++) {
+		for(int i = 0;i<2*(tablero.getCelda()[0].length);i++) {
 			System.out.print("--");
 		}
 	}
