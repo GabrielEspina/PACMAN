@@ -14,9 +14,9 @@ public class Consola {
 		separador();
 		System.out.println("\t"+Direccion.TECLADO_ARRIBA+"\n"
 							+"\t"+Direccion.PACMAN_ARRIBA+"\n"
-							+"A>\t\t<D\n"
-							+"\t^\n"
-							+"\tS");
+							+Direccion.TECLADO_IZQUIERDA + Direccion.PACMAN_IZQUIERDA +"\t\t"+Direccion.PACMAN_DERECHA+Direccion.TECLADO_DERECHA+"\n"
+							+"\t"+Direccion.PACMAN_ABAJO+"\n"
+							+"\t"+Direccion.TECLADO_ABAJO);
 		
 		separador();
 		

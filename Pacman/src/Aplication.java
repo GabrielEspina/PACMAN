@@ -6,7 +6,7 @@ public class Aplication {
 	public static void main(String[] args) {
 		
 		Consola 		console = 	new Consola();
-		Pacman			pacman 	=	new Pacman();
+		Pacman			pacman 	=	new Pacman(2,2);
 		Laberinto 		tablero = 	new Laberinto(7,20); //PASAR AL CONSTRUCTOR LAS DIMENSIONES DEL TABLERO
 		
 		String dato;
@@ -15,7 +15,7 @@ public class Aplication {
 		console.mostrarDirecciones();
 		console.esperarUsuario();
 	
-		tablero.getCelda()[pacman.getFila()][pacman.getColumna()].ocuparCelda(pacman.getDireccion());
+		tablero.ocuparCelda(pacman);
 		
 		
 		do {

@@ -25,6 +25,11 @@ public enum Direccion {
 		public String toString() {
 			return ">";
 		}
+	},
+	PACMAN_VACIO{
+		public String toString() {
+			return "-";
+		}
 	}
 	,
 	TECLADO_ARRIBA{

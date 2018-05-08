@@ -2,12 +2,12 @@ package ar.edu.ub.pacman.data;
 public class Pacman {
 	private int fila;
 	private int columna;
-	private String direccion;
+	private Direccion direccion;
 	
 	
-	public Pacman() {
-		setFila(2);
-		setColumna(2);
+	public Pacman(int fila, int columna) {
+		setFila(fila);
+		setColumna(columna);
 		setDireccion(Direccion.PACMAN_ARRIBA);
 	}
 
@@ -24,11 +24,14 @@ public class Pacman {
 	public void setColumna(int columna) {
 		this.columna = columna;
 	}
-	public  String getDireccion() {
+
+	public Direccion getDireccion() {
 		return direccion;
 	}
+
 	public void setDireccion(Direccion direccion) {
-		this.direccion = direccion.toString();
+		this.direccion = direccion;
 	}
+
 
 }

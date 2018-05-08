@@ -1,29 +1,31 @@
 package ar.edu.ub.pacman.data;
 public class Celda {
 	
-	private String celda;
+	private Direccion celda;
 	
 	//METODOS PUBLICOS
-	public void ocuparCelda(String  direccion) {
+	public void ocuparCelda(Direccion  direccion) {
 		setCelda(direccion);
 	}
 	
 	public void desocuparCelda() {
-		setCelda("-");
+		setCelda(Direccion.PACMAN_VACIO);
 	}
 	
-	public String obtenerCelda() {
+	public Direccion obtenerCelda() {
 		return getCelda();
 	}
-	
-	//METODOS PRIVADOS
-	private String getCelda() {
+
+	public Direccion getCelda() {
 		return celda;
 	}
 
-	private void setCelda(String celda) {
+	public void setCelda(Direccion celda) {
 		this.celda = celda;
 	}
+	
+	//METODOS PRIVADOS
+
 	
 	
 }

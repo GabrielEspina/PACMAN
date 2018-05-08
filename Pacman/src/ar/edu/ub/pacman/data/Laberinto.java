@@ -101,7 +101,14 @@ public class Laberinto {
 		
 	}
 	
-	
+	public void ocuparCelda(Pacman pacman) {
+		if((pacman.getFila()>=0 && pacman.getFila()<=getCelda().length) && (pacman.getColumna()>=0 && pacman.getColumna()<=getCelda()[0].length)) {
+			getCelda()[pacman.getFila()][pacman.getColumna()].ocuparCelda(pacman.getDireccion());
+		}else {
+			getCelda()[2][2].ocuparCelda(pacman.getDireccion());
+		}
+			
+	}
 
 	private void moverPacman(Pacman pacman, Integer fila,Integer columna ) {
 		pacman.setFila(pacman.getFila() + fila);
